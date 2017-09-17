@@ -1,0 +1,115 @@
+<main flex layout="row" layout-align="space-between stretch">
+  <section flex layout="column">
+    <md-toolbar class="md-whiteframe-z1">
+      <div layout="row" layout-align="space-between center" class="md-toolbar-tools">
+        <md-button hide-gt-sm class="md-icon-button" aria-label="Settings" ng-click="vm.toggleSidenav('profiles-nav')">
+          <md-icon>arrow_back</md-icon>
+        </md-button>
+        <h3>User Group Association Suite</h3>
+      </div>
+    </md-toolbar>
+    <md-content flex layout="column" class="background">
+      <div flex layout-gt-sm="row" layout-align="center start">
+        <div flex-gt-sm="95" flex-gt-lg="80">
+
+          <div class="card-like">
+            <main class="historicaltrend" layout="row">
+              <md-list layout-margin>
+
+                <md-list-item class="md-3-line">
+                  <img ng-src="http://www.iconarchive.com/download/i103427/paomedia/small-n-flat/handshake.ico" class="md-avatar" alt="{{item.who}}" />
+                  <div class="md-list-item-text" layout="column">
+                    <h3>Welcome to Shake Hands</h3>
+                  </div>
+                </md-list-item>
+                <md-list-item class="md-3-line md-long-text">
+                  <md-icon class="md-avatar">info</md-icon>
+                  <div class="md-list-item-text warning-message">
+                    <h3>Introduction</h3>
+                    <p>
+                     This app serves as a platform where new users and groups can be created. Users can join any group of their
+                     choice and enjoy the privilledges of specific group.
+                     <br>
+                     The list of groups is alphabetically sorted, shows the most meta information about the group like type and member count.
+                     The is list is enriched with search facility.
+                     <br>
+                     The group details page shows basic information about the group like name, type of group, location and link to
+                     home page. It also shows basic information about the users along with their membership statuses.
+                     <br>
+                     The selection of groups while creation user is enriched with auto-completion facility.
+                     The list of users is alphabetically sorted, shows the most meta information about the user like nick name and group count.
+                     The is list is powered with search facility.
+                     <br>
+                     The user details page shows the basic information about the user and his/her association with specific group.
+                     <br>
+                     The user is notified creation of new group and user via toast in a top right corner. Users and groups got selected after creation.
+                     Tooltips are placed in all sections in order help user for app usage.
+                    </p>
+                  </div>
+                </md-list-item>
+                <md-divider></md-divider>
+                <md-list-item class="md-3-line md-long-text">
+                  <md-icon class="md-avatar">info</md-icon>
+                  <div class="md-list-item-text warning-message">
+                    <h3>How to use the app</h3>
+                    <p>
+                     The app is self driven and gives notification to user at various instances. The icon selection also helps the user to
+                     navigate through the app. From introduction page user can press "Start App" and navigate to the group page. The group
+                     page contains a "fab button" for opening creation dialog box. User can select group type and fill the manadatory field
+                     to create new group. User will get notification in top right corner on successful creation of group and newly created
+                     group will get selected.
+                    <br>
+                    The user can navigate to the users page by selecting "Person" icon on top of the list. On the "User page" a user
+                    can create the new user, while creating one needs to select the groups to join and once the user is created successfully
+                    system will show the notification.
+                    <br>
+                    Both user page and group page will show groups and members on selecting respective entity.
+                    </p>
+                    <md-input-container flex-gt-md="30">
+                  </div>
+                </md-list-item>
+                <md-divider></md-divider>
+                <md-list-item class="md-3-line md-long-text">
+                  <md-icon class="md-avatar">info</md-icon>
+                  <div class="md-list-item-text warning-message">
+                    <h3>Technical Stack</h3>
+                    <p>
+                      Typescript, AngularJS, Node.js, Visualization Library: Angular Material, Database: Mongodb, Browser: Chrome
+                    </p>
+                  </div>
+                </md-list-item>
+                <md-divider></md-divider>
+                <md-list-item class="md-3-line md-long-text">
+                  <md-icon class="md-avatar">info</md-icon>
+                  <div class="md-list-item-text warning-message">
+                    <h3>Restrictions and assumptions:</h3>
+                    <p>
+                      For the demo purposes some assumptions are being made:
+                        <br>App is restricted to add new groups and new users (user joining groups on creation time).
+                        <br>There are pre-defined group types are present in the system.
+                        <br>The menu items are disablesd for demo purpose, they represent the future aspect of application.
+                        <br>A user can only be created after selecting one of the existing groups.
+                    </p>
+                    <br />
+                    <p>Future Aspects:
+                          <br> Sending mails for notification
+                          <br>Displaying discussion section in groups page
+                          <br>Ability to change membership status
+                    </p>
+                  </div>
+                </md-list-item>
+
+                <md-divider></md-divider>
+                <md-subheader class="md-no-sticky">Start Application.</md-subheader>
+                <md-list-item ui-sref="overview">
+                  <md-icon>view_quilt</md-icon>
+                  <p>Start app</p>
+                </md-list-item>
+
+              </md-list>
+          </div>
+        </div>
+      </div>
+    </md-content>
+  </section>
+  </main>

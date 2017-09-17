@@ -1,0 +1,70 @@
+<md-table-container ng-if="vm.area ==='groups'">
+  <table md-table class="md-primary"  md-row-select="vm.rowSelection" multiple ng-model="vm.selected">
+    <thead md-head md-order="vm.order">
+      <tr md-row>
+        <th md-column></th>
+        <th md-column md-order-by="membershipId">Membership Id</th>
+        <th md-column >Member Name</th>
+        <th md-column >Designation </th>
+        <th md-column >Joining Date</th>
+        <th md-column>Duration</th>
+        <th md-column>Contact Info</th>
+        <th md-column>Membership</th>
+      </tr>
+    </thead>
+    <tbody md-body>
+      <tr md-row md-select="item" md-select-id="_id" md-auto-select ng-repeat="item in vm.items | orderBy: vm.order track by $index">
+        <td md-cell><md-icon class="md-avatar">person</md-icon></td>
+        <td md-cell>{{item.membershipId}}</td>
+        <td md-cell>{{item.name}}</td>
+        <td md-cell>{{item.designation}}</td>
+        <td md-cell>{{item.joiningDate}}</td>
+        <td md-cell>{{item.duration.value}} {{item.duration.unit}}</td>
+        <td md-cell>{{item.email}}</td>
+        <td md-cell>
+          <md-icon>{{item.isMembershipCancelled ? 'mood_bad' : 'mood'}}</md-icon>
+        </td>
+      </tr>
+    </tbody>
+    <tfoot md-foot>
+      <tr md-row>
+        <td md-cell colspan="2"><label>Associatons: </label>{{ vm.items.length }} of {{vm.items.length}}</td>
+        <td md-cell colspan="6"></td>
+      </tr>
+    </tfoot>
+  </table>
+</md-table-container>
+
+<md-table-container ng-if="vm.area === 'user'">
+  <table md-table class="md-primary"  md-row-select="vm.rowSelection" multiple ng-model="vm.selected">
+    <thead md-head md-order="vm.order">
+      <tr md-row>
+        <th md-column></th>
+        <th md-column >Group Name</th>
+        <th md-column >Group Type</th>
+        <th md-column >Address </th>
+        <th md-column >Home page</th>
+        <th md-column>Start Date</th>
+        <th md-column>Description</th>
+      </tr>
+    </thead>
+    <tbody md-body>
+      <tr md-row md-select="item" md-select-id="_id" md-auto-select ng-repeat="item in vm.items | orderBy: vm.order track by $index">
+        <td md-cell><md-icon class="md-avatar">{{item.groupType.icon}}</md-icon></td>
+        <td md-cell>{{item.name}}</td>
+        <td md-cell>{{item.groupType.name}}</td>
+        <td md-cell>{{item.address}}</td>
+        <td md-cell>{{item.homepage}}</td>
+        <td md-cell>{{item.date}}</td>
+        <td md-cell>{{item.description}}</td>
+      </tr>
+    </tbody>
+    <tfoot md-foot>
+      <tr md-row>
+        <td md-cell colspan="2"><label>Associatons: </label>{{ vm.items.length }} of {{vm.items.length}}</td>
+        <td md-cell colspan="5"></td>
+      </tr>
+    </tfoot>
+  </table>
+</md-table-container>
+

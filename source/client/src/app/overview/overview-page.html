@@ -1,0 +1,74 @@
+<main flex layout="row" layout-align="space-between stretch">
+    <md-sidenav md-disable-backdrop md-component-id="event-nav"  layout="column" md-is-locked-open="vm.$mdMedia('gt-sm')" md-is-open="true"
+      ng-class="{'md-whiteframe-z2': vm.$mdMedia('gt-sm')}" class="md-sidenav-left md-sidenav-list">
+      <md-toolbar class="md-whiteframe-z2">
+        <div class="md-toolbar-tools">
+          <tool-bar></tool-bar>
+          <h3>Groups #{{vm.groups.length}}</h3>
+        </div>
+      </md-toolbar>
+
+      <generic-list items="vm.groups"
+        selected-item="vm.selectedGroup"
+        item-selected="vm.showGroupDetails(item)" list-type="'groups'"></generic-list>
+
+        <md-button class="md-accent md-fab md-fab-bottom-right" ng-click="vm.addGroup($event)">
+          <md-icon>group_add</md-icon>
+        </md-button>
+    </md-sidenav>
+
+
+    <section flex layout="column">
+      <md-content flex layout="column" class="background">
+        <md-toolbar class="x-large md-primary md-hue-1" ng-show="vm.selectedGroup" layout="row" layout-align="center start">
+          <div flex flex-gt-sm="95">
+            <div class="md-toolbar-tools">
+              <h1 class="md-title">{{vm.selectedGroup.name}} <br >
+              <em >{{vm.selectedGroup.groupType.name}}</em> </h1>
+              <span flex></span>
+              <md-button class="md-icon-button" ui-sref="appoverview">
+                  <md-icon>home</md-icon>
+              </md-button>
+              <custom-menu item="vm.selectedGroup" category="'group'"
+              on-delete="vm.deleteGroup($event)" on-edit="vm.editGroup($event)"></custom-menu>
+            </div>
+
+            <md-list class="md-subhead">
+              <md-list-item>
+                <md-icon>date_range</md-icon>
+                <p>{{ vm.selectedGroup.date  }}</p>
+              </md-list-item>
+              <md-list-item>
+                <md-icon>place</md-icon>
+                <p>{{ vm.selectedGroup.address }}</p>
+              </md-list-item>
+              <md-list-item>
+                <md-icon>home</md-icon>
+                <p><a ng-href="www.google.com">{{vm.selectedGroup.homepage}}</a></p>
+              </md-list-item>
+            </md-list>
+
+          </div>
+        </md-toolbar>
+
+        <div flex layout-gt-sm="row" layout-align="center start" class="toolbar-overlay-content">
+          <div flex-gt-sm="95" ng-show="vm.selectedGroup">
+
+            <md-card>
+              <md-card-title layout="row">
+                <md-card-title-text flex>
+                  <span class="md-headline">Members</span>
+                </md-card-title-text>
+             </md-card-title>
+
+              <md-card-content>
+               <generic-table items="vm.selectedGroup.members" area="'groups'"></generic-table>
+              </md-card-content>
+
+            </md-card>
+          </div>
+        </div>
+      </md-content>
+
+    </section>
+  </main>

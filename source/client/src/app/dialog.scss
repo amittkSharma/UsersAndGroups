@@ -1,0 +1,30 @@
+.condensed-dialog {
+  padding: 1em;
+
+  md-input-container .md-errors-spacer {
+    display: none;
+  }
+
+  md-input-container {
+    margin: 16px 0;
+  }
+
+  .md-chips {
+    margin: 1em 0;
+  }
+}
+
+.standard-dialog {
+  // padding: 1em;
+
+  md-input-container .md-errors-spacer {
+    display: none;
+  }
+
+  .md-chips {
+    margin: 1em 0;
+  }
+  // md-input-container {
+  //   margin: 24px 0;
+  // }
+}

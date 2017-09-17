@@ -1,0 +1,19 @@
+.selected {
+  border-right: 8px solid #512da8;
+  background: #eee;
+}
+
+.validation-message {
+  font-size: 12px;
+  color: #dd2c00;
+  margin: 10px 0 0 25px;
+}
+
+.search-control {
+  margin: 30px 10px 0 0;
+  display: block;
+}
+
+.search-message {
+  margin-right: 10px;
+}

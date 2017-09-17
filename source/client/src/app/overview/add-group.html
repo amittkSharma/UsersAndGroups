@@ -1,0 +1,82 @@
+<md-dialog aria-label="Add Group"  flex-sm="80" flex-gt-sm="50">
+    <form name="form" novalidate layout="column" flex>
+      <md-toolbar>
+        <div class="md-toolbar-tools">
+          <h2>Add Group</h2>
+          <span flex></span>
+          <md-button class="md-icon-button" ng-click="vm.cancel()">
+            <md-icon aria-label="Close dialog">close</md-icon>
+          </md-button>
+        </div>
+      </md-toolbar>
+      <md-dialog-content  class="condensed-dialog" flex layout="column" layout-align="start stretch">
+
+        <div layout-gt-xs="row">
+          <md-input-container class="md-block" flex-gt-xs>
+            <label>Group Type</label>
+            <md-select ng-model="vm.group.groupType">
+              <md-option ng-repeat="grpType in vm.groupTypes" ng-value="grpType.id">
+                {{grpType.name}}
+              </md-option>
+            </md-select>
+          </md-input-container>
+        </div>
+
+        <div layout-gt-xs="row">
+          <md-input-container class="md-block" flex-gt-xs>
+            <label>Group Name</label>
+            <input type="text"
+              name="label" required
+              ng-model="vm.group.name" >
+            <div ng-messages="form.label.$error">
+              <div ng-message="required">Group name is required!</div>
+            </div>
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-xs>
+            <label>Short Name</label>
+            <input type="text" name="shortName" required ng-model="vm.group.shortName">
+            <div ng-messages="form.shortName.$error">
+              <div ng-message="required">Short name is required!</div>
+            </div>
+          </md-input-container>
+        </div>
+
+        <div layout-gt-xs="row">
+          <md-input-container class="md-block" flex-gt-xs>
+            <label>Located in (Country)</label>
+            <input name="address" ng-model="vm.group.address" required>
+            <div ng-messages="form.address.$error">
+              <div ng-message="required">Address is required!</div>
+            </div>
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-xs>
+            <label>Homepage</label>
+            <input name="homepage" ng-model="vm.group.homepage" required>
+            <div ng-messages="form.homepage.$error">
+              <div ng-message="required">Homepage name is required!</div>
+            </div>
+          </md-input-container>
+        </div>
+
+        <div layout-gt-xs="row">
+          <md-input-container class="md-input-has-placeholder">
+            <label>Start Date/Time</label>
+            <input mdc-datetime-picker="" date="true" time="true" type="text" required
+            placeholder="Date" max-date="dateTimeEnd" ng-model="vm.group.date" class=" md-input"
+            id="input_0">
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-xs>
+            <label>Description</label>
+            <input name="description" ng-model="vm.group.description" required>
+            <div ng-messages="form.description.$error">
+              <div ng-message="required">Description name is required!</div>
+            </div>
+          </md-input-container>
+        </div>
+      </md-dialog-content>
+
+      <md-dialog-actions layout="row" layout-align="end center">
+        <md-button class="md-primary" ng-click="vm.save()" ng-disabled="form.$invalid" md-autofocus>Save</md-button>
+      </md-dialog-actions>
+    </form>
+  </md-dialog>

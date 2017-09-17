@@ -1,0 +1,83 @@
+<!doctype html>
+<html ng-app="users-groups-app">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>User Group Association</title>
+  <meta name="description" content="An App to search repositories, visualize corrosponding KPIs and open issues.">
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- See https://github.com/GoogleChrome/samples/tree/gh-pages/web-application-manifest -->
+  <link rel="manifest" href="manifest.json">
+  <!-- See https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chrome-39-for-Android -->
+  <meta name="theme-color" content="#db5945">
+  <link rel="icon" href="/images/favicon.ico">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <base href="/">
+
+  <style type="text/css">
+    [ng\:cloak],
+    [ng-cloak],
+    [data-ng-cloak],
+    [x-ng-cloak],
+    .ng-cloak,
+    .x-ng-cloak {
+      display: none !important;
+    }
+  </style>
+
+  <!-- build:css({.tmp/serve,src}) styles/app.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="../bower_components/angular-material/angular-material.css" />
+  <link rel="stylesheet" href="../bower_components/angular-material-data-table/dist/md-data-table.css" />
+  <link rel="stylesheet" href="../bower_components/extended-datetimepicker/css/material-datetimepicker.css" />
+  <!-- endbower -->
+
+  <!-- inject:css -->
+  <link rel="stylesheet" href="app/index.css">
+  <!-- endinject -->
+  <!-- endbuild -->
+
+  <script>
+    window.VERSION = '@@version';
+    window.COMMIT_SHA = '@@commitSha';
+  </script>
+
+</head>
+
+<body>
+  <!--[if lt IE 11]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+  <div ui-view class="ui-viewport"></div>
+
+  <!-- build:js(src) scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="../bower_components/angular/angular.js"></script>
+  <script src="../bower_components/angular-aria/angular-aria.js"></script>
+  <script src="../bower_components/angular-animate/angular-animate.js"></script>
+  <script src="../bower_components/angular-messages/angular-messages.js"></script>
+  <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="../bower_components/angular-material/angular-material.js"></script>
+  <script src="../bower_components/angular-material-data-table/dist/md-data-table.js"></script>
+  <script src="../bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="../bower_components/angular-gettext/dist/angular-gettext.js"></script>
+  <script src="../bower_components/momentjs/moment.js"></script>
+  <script src="../bower_components/extended-datetimepicker/js/angular-material-datetimepicker.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js({.tmp/serve,.tmp/partials}) scripts/app.js -->
+  <!-- inject:js -->
+  <script src="app/index.js"></script>
+  <!-- endinject -->
+
+  <!-- inject:partials -->
+  <!-- angular templates will be automatically converted in js and inserted here -->
+  <!-- endinject -->
+  <!-- endbuild -->
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "users-groups-app",
+  "version": "0.0.1",
+  "dependencies": {
+    "angular": "1.5.11",
+    "angular-aria": "1.5.11",
+    "angular-animate": "1.5.11",
+    "angular-messages": "1.5.11",
+    "angular-ui-router": "1.0.0-rc.1",
+    "angular-material": "1.1.4",
+    "angular-material-data-table": "0.10.10",
+    "angular-sanitize": "1.5.11",
+    "angular-gettext": "2.3.7",
+    "extended-datetimepicker": "*"
+  },
+  "resolutions": {
+    "angular": "1.5.11",
+    "angular-material": "^1.0.0"
+  }
+}

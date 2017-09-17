@@ -1,0 +1,50 @@
+{
+  "name": "users-groups",
+  "version": "0.0.1",
+  "description": "App to manage users and groups",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && ncp package.json dist/package.json",
+    "prestart": "npm run build",
+    "start": "nodemon --delay 1 dist/index.js | bunyan --color -o short",
+    "debug": "node --inspect dist/index.js | bunyan --color -o short",
+    "lint": "tslint --project .",
+    "pretest": "tsc test/test.ts --module commonjs",
+    "test": "mocha --timeout 25000"
+  },
+  "keywords": [
+    "Users",
+    "Groups"
+  ],
+  "author": "Amit Sharma",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "bunyan": "^1.8.12",
+    "compression": "^1.7.0",
+    "cors": "^2.8.4",
+    "express": "^4.15.4",
+    "path": "^0.12.7",
+    "querystring": "^0.2.0",
+    "request": "^2.81.0",
+    "supertest": "^3.0.0",
+    "url": "^0.11.0",
+    "mongodb": "2.2.31",
+    "uuid": "3.1.0"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.16.5",
+    "@types/bunyan": "^1.8.2",
+    "@types/chai": "^4.0.2",
+    "@types/express": "^4.0.37",
+    "@types/mocha": "^2.2.41",
+    "@types/request": "^2.0.3",
+    "chai": "^4.1.2",
+    "mocha": "^3.5.0",
+    "nodemon": "^1.11.0",
+    "ts-node": "^3.3.0",
+    "tslint": "^5.7.0",
+    "typescript": "^2.4.2",
+    "treeify": "1.0.1"
+  }
+}

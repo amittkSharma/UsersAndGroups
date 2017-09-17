@@ -1,0 +1,20 @@
+
+md-toolbar.x-large {
+  height: 256px;
+  min-height: 256px;
+  max-height: 256px;
+
+  .md-subhead {
+    padding: 16px;
+    margin: 0;
+  }
+}
+
+.toolbar-overlay-content {
+  position: absolute;
+  top: 220px;
+  left: 0;
+  right: 0;
+  z-index: 30;
+}
+

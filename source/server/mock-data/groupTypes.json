@@ -1,0 +1,8 @@
+[
+  {"name": "Cricket Club",  "groupId": "grpType_1", "icon": "games",  "shortName": "cc"},
+  {"name": "Football Club", "groupId": "grpType_2", "icon": "games", "shortName": "fc"},
+  {"name": "Olympic Squad", "groupId": "grpType_3", "icon": "games", "shortName": "os"},
+  {"name": "Computer Science", "groupId": "grpType_4", "icon": "school", "shortName": "cs"},
+  {"name": "MEAN stack", "groupId": "grpType_5", "icon": "web_asset", "shortName": "MEAN"},
+  {"name": "Travellers", "groupId": "grpType_6", "icon": "card_travel", "shortName": "travel"}
+]

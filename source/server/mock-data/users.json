@@ -1,0 +1,6 @@
+
+[
+  {"name": "Lasse", "id": "1", "shortName": "LL", "description": "This is the group for cricket lovers", "startDate": "10.09.2008", "address": {"street": "12 WeiterStadt", "state":"Weiterstadt"}, "email": "l@gmail.com", "memberOf": [{"groupId": "grp_2", "membershipId":123}, {"groupId": "grp_3", "membershipId":1234} ]},
+  {"name": "Christos", "id": "2", "shortName": "CT", "description": "This is the group for cricket lovers", "startDate": "10.09.2008", "address": {"street": "12 WeiterStadt", "state":"Weiterstadt"}, "email": "c@gmail.com", "memberOf": [{"groupId": "grp_3", "membershipId":12345}]},
+  {"name": "Amit", "id": "3", "shortName": "AS", "description": "This is the group for cricket lovers", "startDate": "10.09.2008", "address": {"street": "12 WeiterStadt", "state":"Weiterstadt"}, "email": "a@gmail.com", "memberOf": [{"groupId": "grp_2", "membershipId":1234}, {"groupId": "grp_3", "membershipId":123} ]}
+]

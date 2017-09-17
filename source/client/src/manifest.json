@@ -1,0 +1,10 @@
+{
+  "name": "User Group Assocation App UI",
+  "short_name": "User Group Assocation App UI",
+  "background_color": "rgb(81,45,168)",
+  "theme_color": "rgb(81,45,168)",
+
+  "start_url": "/index.html",
+  "display": "standalone",
+  "orientation": "portrait"
+}

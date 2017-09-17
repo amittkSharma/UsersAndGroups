@@ -1,0 +1,33 @@
+<md-menu>
+    <md-button aria-label="open menu" class="md-icon-button" ng-click="vm.openMenu($mdMenu.open, $event)">
+      <md-icon md-menu-origin>more_vert</md-icon>
+    </md-button>
+    <md-menu-content width="2">
+      <md-menu-item>
+        <md-button ng-click="vm.onEdit({item: vm.item})" ng-disabled="true">
+          <md-icon md-menu-align-target>edit</md-icon>
+          Edit
+        </md-button>
+      </md-menu-item>
+      <md-menu-item>
+        <md-button ng-click="vm.onDelete({item: vm.item})" ng-disabled="true">
+          <md-icon md-menu-align-target>delete</md-icon>
+          Delete
+        </md-button>
+      </md-menu-item>
+      <md-divider></md-divider>
+      <md-menu-item ng-if="vm.isMenuItemVisible()">
+        <md-button ng-click="vm.onClone({item: vm.item})" ng-disabled="true">
+          <md-icon md-menu-align-target>content_copy</md-icon>
+           Clone {{vm.category}}
+        </md-button>
+      </md-menu-item>
+      <md-divider></md-divider>
+      <md-menu-item ng-if="vm.isMenuItemVisible()">
+          <md-button ng-click="vm.onAdd($event)" ng-disabled="true">
+            <md-icon md-menu-align-target>{{vm.category == 'group' ? 'person' : 'people'}}</md-icon>
+             {{vm.category == 'group' ? 'Add members' : 'Add to groups'}}
+          </md-button>
+        </md-menu-item>
+    </md-menu-content>
+  </md-menu>

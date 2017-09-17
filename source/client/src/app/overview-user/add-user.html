@@ -1,0 +1,91 @@
+<md-dialog aria-label="Add User"  flex-sm="80" flex-gt-sm="50">
+    <form name="form" novalidate layout="column" flex>
+      <md-toolbar>
+        <div class="md-toolbar-tools">
+          <h2>Add User</h2>
+          <span flex></span>
+          <md-button class="md-icon-button" ng-click="vm.cancel()">
+            <md-icon aria-label="Close dialog">close</md-icon>
+          </md-button>
+        </div>
+      </md-toolbar>
+      <md-dialog-content  class="condensed-dialog" flex layout="column" layout-align="start stretch">
+
+        <div layout-gt-xs="row">
+          <md-input-container class="md-block" flex-gt-xs>
+            <label>User Name</label>
+            <input type="text"
+              name="label" required
+              ng-model="vm.user.name" >
+            <div ng-messages="form.label.$error">
+              <div ng-message="required">User name is required!</div>
+            </div>
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-xs>
+            <label>Short Name</label>
+            <input type="text" name="shortName" required ng-model="vm.user.shortName">
+            <div ng-messages="form.shortName.$error">
+              <div ng-message="required">Short name is required!</div>
+            </div>
+          </md-input-container>
+        </div>
+
+        <div layout-gt-xs="row">
+          <md-input-container class="md-block" flex-gt-xs>
+            <label>Located in (street)</label>
+            <input name="street" ng-model="vm.user.address.street" required>
+            <div ng-messages="form.street.$error">
+              <div ng-message="required">Street name is required!</div>
+            </div>
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-xs>
+            <label>Located in (state)</label>
+            <input name="state" ng-model="vm.user.address.state" required>
+            <div ng-messages="form.state.$error">
+              <div ng-message="required">State name is required!</div>
+            </div>
+          </md-input-container>
+        </div>
+
+
+        <div layout-gt-xs="row">
+          <md-input-container class="md-block" flex-gt-xs>
+            <label>Email</label>
+            <input name="email" ng-model="vm.user.email" required ng-pattern="/^.+@.+\..+$/">
+            <div ng-messages="form.email.$error">
+                <div ng-message-exp="['required', 'pattern']">
+                    Email is required and with valid format.
+                </div>
+            </div>
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-xs>
+            <label>Description</label>
+            <input name="description" ng-model="vm.user.description" required>
+            <div ng-messages="form.description.$error">
+              <div ng-message="required">Description name is required!</div>
+            </div>
+          </md-input-container>
+        </div>
+
+        <div layout-gt-xs="row">
+          <md-input-container class="md-block" flex-gt-xs>
+            <md-contact-chips required
+              ng-model="vm.selectedGroups"
+              md-contacts="vm.querySearch($query)"
+              md-contact-name="name"
+              md-contact-image="image"
+              md-require-match="true"
+              md-highlight-flags="i"
+              filter-selected="true"
+              placeholder="Add more groups....">
+            </md-contact-chips>
+            <div class="hint">Select atleast one group</div>
+        </md-input-container>
+        </div>
+      </md-dialog-content>
+
+      <md-dialog-actions layout="row" layout-align="end center">
+        <md-button class="md-primary" ng-click="vm.save()" ng-disabled="form.$invalid" md-autofocus>Save</md-button>
+      </md-dialog-actions>
+    </form>
+  </md-dialog>
