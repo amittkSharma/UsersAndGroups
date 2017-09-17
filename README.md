@@ -53,3 +53,12 @@ Both user page and group page will show groups and members on selecting respecti
       <br>Displaying discussion section in groups page
       <br>Ability to change membership status
 </p>
+
+## App Snapshots
+![Alt text](https://github.com/amittkSharma/UsersAndGroups/blob/master/images/AddGroup.PNG?raw=true "Add Group")
+
+![Alt text](https://github.com/amittkSharma/UsersAndGroups/blob/master/images/AddUser.PNG?raw=true "Add User")
+
+![Alt text](https://github.com/amittkSharma/UsersAndGroups/blob/master/images/UserDetailsPage.PNG?raw=true "User Details Page")
+
+![Alt text](https://github.com/amittkSharma/UsersAndGroups/blob/master/images/GroupDetailsPage.PNG?raw=true "Group Details Page")
