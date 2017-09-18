@@ -69,12 +69,9 @@ Both user page and group page will show groups and members on selecting respecti
 ## App Snapshots
 #Add Group Dialog:
 ![Alt text](https://github.com/amittkSharma/UsersAndGroups/blob/master/images/AddGroup.PNG?raw=true "Add Group")
-<br/>
 #Add User Dialog:
 ![Alt text](https://github.com/amittkSharma/UsersAndGroups/blob/master/images/AddUser.PNG?raw=true "Add User")
-<br/>
 #User Details Page: Showing user basic information and corrosponding group memberships
 ![Alt text](https://github.com/amittkSharma/UsersAndGroups/blob/master/images/UserDetailsPage.PNG?raw=true "User Details Page")
-<br/>
 #Group Details Page: Showing group baisc information and corrosponding members information.
 ![Alt text](https://github.com/amittkSharma/UsersAndGroups/blob/master/images/GroupDetailsPage.PNG?raw=true "Group Details Page")
