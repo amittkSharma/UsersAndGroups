@@ -40,28 +40,33 @@ Both user page and group page will show groups and members on selecting respecti
 </p>
 
 <h3>Restrictions and assumptions:</h3>
-<p>
-  For the demo purposes some assumptions are being made:
-    <br>App is restricted to add new groups and new users (user joining groups on creation time).
-    <br>There are pre-defined group types are present in the system.
-    <br>The menu items are disablesd for demo purpose, they represent the future aspect of application.
-    <br>A user can only be created after selecting one of the existing groups.
+<p>For the demo purposes some assumptions are being made:
+  <ul>
+    <li>App is restricted to add new groups and new users (user joining groups on creation time)</li>
+    <li>There are pre-defined group types are present in the system</li>
+    <li>The menu items are disablesd for demo purpose, they represent the future aspect of application</li>
+    <li>A user can only be created after selecting one of the existing groups</li>
+  </ul>
 </p>
 <br />
 <p>Future Aspects:
-      <br> Sending mails for notification
-      <br>Displaying discussion section in groups page
-      <br>Ability to change membership status
+   <ul>
+     <li>Sending mails for notification</li>
+     <li>Displaying discussion section in groups page</li>
+     <li>Ability to change membership status</li>
+   </ul>
 </p>
 
 ## Steps to install and get app up and running:
-<p>Steps:
-      <br> Clone the repository on the local machine.
-      <br> Install Mongodb, nodejs if not installed on the machine.
-      <br> Navigate to the 'Config.ts' in the server section of the app to update the 'Mongodb' connection property      ('userGroupsDataDb') to point current instance of the mongo database
-      <br> Install the node packages for server part and execute 'npm start' to start the server
-      <br> Install the node and bower packages for client part and execute 'npm start' to get the UI up and running
-      <br> If internet explorer is the default browser , then switch to 'Chrome' for better user experience.
+<p>Steps: 
+   <ul>
+     <li>Clone the repository on the local machine.</li>
+     <li>Install Mongodb, nodejs if not installed on the machine</li>
+     <li>Navigate to the 'Config.ts' in the server section of the app to update the 'Mongodb' connection property      ('userGroupsDataDb') to point current instance of the mongo database</li>
+     <li>Install the node packages for server part and execute 'npm start' to start the server</li>
+     <li>Install the node and bower packages for client part and execute 'npm start' to get the UI up and running</li>
+     <li>If internet explorer is the default browser , then switch to 'Chrome' for better user experience</li>
+   </ul>
 </p>
 
 
