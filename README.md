@@ -54,6 +54,18 @@ Both user page and group page will show groups and members on selecting respecti
       <br>Ability to change membership status
 </p>
 
+## Steps to install and get app up and running:
+<p>Steps:
+      <br> Clone the repository on the local machine.
+      <br> Install Mongodb, nodejs if not installed on the machine.
+      <br> Navigate to the 'Config.ts' in the server section of the app to update the 'Mongodb' connection property.
+      <br> Install the node packages for server part and execute 'npm start' to start the server
+      <br> Install the node and bower packages for client part and execute 'npm start' to get the UI up and running
+      <br> If internet explorer is the default browser , then switch to 'Chrome' for better user experience.
+</p>
+
+
+
 ## App Snapshots
 ![Alt text](https://github.com/amittkSharma/UsersAndGroups/blob/master/images/AddGroup.PNG?raw=true "Add Group")
 
