@@ -53,7 +53,9 @@ Both user page and group page will show groups and members on selecting respecti
    <ul>
      <li>Sending mails for notification</li>
      <li>Displaying discussion section in groups page</li>
+     <li>Organising new events both by group or users</li>
      <li>Ability to change membership status</li>
+     <li>Creation of new group types (validated with uniqueness)</li>
    </ul>
 </p>
 
