@@ -18,11 +18,11 @@
   "author": "AMIT SHARMA",
   "license": "MIT",
   "dependencies": {
-    "idb": "2.0.1",
-    "uuid": "3.1.0"
+    "idb": "2.1.13",
+    "uuid": "3.3.2"
   },
   "devDependencies": {
-    "@types/angular": "1.6.32",
+    "@types/angular": "1.6.51",
     "@types/angular-material": "1.1.45",
     "@types/angular-mocks": "1.5.11",
     "@types/angular-ui-router": "1.1.37",
